@@ -1,4 +1,5 @@
 #encoding:utf-8
+#ansible 1.9.6
 import time
 import os
 import random
