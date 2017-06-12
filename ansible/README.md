@@ -53,7 +53,7 @@ Ansible是作为自动化运维的底层实现，功能很强大，但需要通�
     }   
     
 ## postman测试图片如下：
-![image](/postman_test_API.png)
+![image](/Postman_test_API.png)
     
     
 
