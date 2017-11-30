@@ -3,12 +3,16 @@
 Ansible是作为自动化运维的底层实现，功能很强大，但需要通过命令或playbook的yaml文件来实现，相对对运维人员而言，学习成本过大。所以这里要考虑到通过Flask Web框架来实现其二次封装，提供HTTP接口来实现远程调用。但我们在请求Ansbile API的时候，ansible默认本身是阻塞的，用户那边会一直处于等待状态，这样大家的用户体验也不好，所以这里会用rq来实现其非阻塞功能，即实现任务的异步化。
 
 ## 使用的开源软件
-    Ansible
+    ansible-1.9.6
     Flask
     redis-3.0.7
     redis-queue
 
 ## 正式版本v0.1
+## 注意事项
+ansible 1.9版本跟 2.0版本区别很大，此处建议用pip安装 1.9.6版本，安装步骤如下所示：
+升级python至2.7.9后，安装pip：curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py
+pip install ansible==1.9.6
 
 ## mydemo文件明细
    
