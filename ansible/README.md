@@ -13,6 +13,8 @@ Ansible是作为自动化运维的底层实现，功能很强大，但需要通�
 ansible 1.9版本跟 2.0版本区别很大，此处建议用pip安装 1.9.6版本，安装步骤如下所示：<br>
 升级python至2.7.9后，安装pip：curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py <br>
 pip install ansible==1.9.6
+pip install rq 
+pip install flask
 
 ## mydemo文件明细
    
