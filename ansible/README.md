@@ -5,7 +5,7 @@ Ansible是作为自动化运维的底层实现，功能很强大，但需要通�
 ## 使用的开源软件
     Ansible
     Flask
-    redis
+    redis-3.0.7
     redis-queue
 
 ## 正式版本v0.1
@@ -24,8 +24,12 @@ Ansible是作为自动化运维的底层实现，功能很强大，但需要通�
 
 ## 启动步骤
 
-1.先启动redis-server，为了安全起见，只对127.0.0.1开放。
+1.先启动redis-server，为了安全起见，只对127.0.0.1开放，端口为6397。
 
+    tar xvf redis-3.0.7.tar.gz
+    make  
+    cd src
+    make install PREFIX=/usr/local/redis
     /usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf
 
 2.启动initial.py程序，开启Flask应用封装Ansible API。
