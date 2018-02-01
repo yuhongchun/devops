@@ -5,6 +5,7 @@
 作者微博：http://weibo.com/yuhongchun027<br>
 作者博客：http://yuhongchun.blog.51cto.com
 
+***
 # 2018年高级Linux私人班招生
 2018年计划想开一期高级Linux私人培训课程（仅此一期），6人指标，以DevOps和运维架构为主。<br>
 课程内容包括以下部分：<br>
