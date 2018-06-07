@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''echo "Building..."
-git clone https://github.com/yuhongchun/devops.git'''
+git clone git@github.com:yuhongchun/devops.git'''
       }
     }
     stage('Test') {
