@@ -11,7 +11,13 @@ pipeline {
         }
         stage('Clone Code') {
           steps {
-            sh 'git clone git@github.com:yuhongchun/devops.git'
+            sh '''if [ ! -d devops ];then
+    git clone git@github.com:yuhongchun/devops.git
+else
+    rm -rf devops
+    git clone git@github.com:yuhongchun/devops.git
+fi
+'''
           }
         }
       }
