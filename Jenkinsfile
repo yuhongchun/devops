@@ -2,9 +2,18 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sh '''echo "Building..."
-git clone git@github.com:yuhongchun/devops.git'''
+      parallel {
+        stage('Build') {
+          steps {
+            sh '''echo "Building..."
+'''
+          }
+        }
+        stage('Clone Code') {
+          steps {
+            sh 'git clone git@github.com:yuhongchun/devops.git'
+          }
+        }
       }
     }
     stage('Test') {
