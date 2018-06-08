@@ -1,32 +1,22 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            sh '''echo "Building..."
-'''
-          }
-        }
-        stage('Clone Code') {
-          steps {
-            sh '''if [ ! -d devops ];then
-    git clone git@github.com:yuhongchun/devops.git
+    stage('Clone Code') {
+      steps {
+        sh '''if [ ! -d esservice ];then
+    git clone git@gitlab.bmkp.cn:rdc_bd/esservice.git
 else
-    rm -rf devops
-    git clone git@github.com:yuhongchun/devops.git
+    rm -rf esservice
+    git clone git@gitlab.bmkp.cn:rdc_bd/esservice.git
 fi
 '''
-          }
-        }
       }
     }
-    stage('Test') {
+    stage('Build') {
       steps {
-        sh '''echo \'Testing...\'
-cd ./devops/ansible
-/bin/bash sayhello.sh
+        sh '''echo \'Build...\'
+cd esservice
+/usr/local/maven/bin/mvn clean compile install 
 '''
       }
     }
