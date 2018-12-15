@@ -17,7 +17,7 @@
 第8章　自动化运维的后续思考<br>
 附录A　GibLab在DevOps工作中的实际应用<br>
 附录B　用Gunicorn部署高性能Python WSGI服务器<br>
-附录C  Supervisor在DevOps工作中的应用<br>
+附录C   Supervisor在DevOps工作中的应用<br>
 附录D　分布式队列管理Cerely简介<br>
 
 
