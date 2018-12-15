@@ -1,6 +1,0 @@
-- name: Initial Hosts
-  remote_user: root
-  hosts: initial
-  tasks:
-    - name: Initial Job
-      script: /home/yhc/initial.sh
