@@ -1,5 +1,4 @@
-![image](https://github.com/yuhongchun/devops/blob/master/screenhot/image001.jpg)
-
+![image](https://github.com/yuhongchun/devops/blob/master/screehot/image001.jpg)
 
 《DevOps和自动化运维实践》脚本源码
 ========================================
