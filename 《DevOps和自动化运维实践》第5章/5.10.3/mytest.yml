@@ -1,0 +1,7 @@
+- name: Initial Hosts
+  remote_user: root
+  hosts: initial
+  gather_facts: false
+  tasks:
+    - name: Initial Job
+      script: /work/software/initial.sh --basic
