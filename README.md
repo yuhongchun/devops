@@ -2,10 +2,8 @@
 
 《DevOps和自动化运维实践》脚本源码
 ========================================
-附注：因为书中的无论是各项Linux服务的配置文件(主要是YAML文件)还是SHELL脚本、Python脚本，代码量还是较多，所以这里以章节的形式出现，比如1.5.3目录下面有1.sh，<br>
-表示这是1.5.3章节的第一个SHELL脚本，如果是2.sh，则表示是第二个SHELL脚本。其它章节的脚本大家可以依此类推，在哪个章节出现的配置文件或脚本就在哪个章节去找，<br>
-这样方便。再比如SaltStack章节,里面只有/srv/salt，那么大家就可以在对应的目录找到书中对应的脚本。<br>
-本书GitHub地址：http://github.com/yuhongchun/devops/
+附注：因为书中的无论是各项Linux服务的配置文件(主要是YAML文件)还是SHELL脚本、Python脚本，代码量还是较多，所以这里以章节的形式出现，比如1.5.3目录下面有1.sh，表示这是1.5.3章节的第一个SHELL脚本，如果是2.sh，则表示是第二个SHELL脚本。其它章节的脚本大家可以依此类推，在哪个章节出现的配置文件或脚本就在哪个章节去找，这样方便。再比如SaltStack章节,里面只有/srv/salt目录，那么大家就可以在对应的目录找到书中对应的脚本。<br>
+本书GitHub地址：http://github.com/yuhongchun/devops/<br>
 
 章节内容
 ----------------------------------------
@@ -29,4 +27,3 @@
 作者邮件：yuhongchun027@gmail.com<br> 
 作者微博：http://weibo.com/yuhongchun027<br> 
 作者博客：http://yuhongchun.blog.51cto.com<br> 
-
