@@ -1,0 +1,54 @@
+version: '2'
+services:
+  jenkins-master:
+    image: jenkins
+    container_name: jenkins-master
+    ports:
+    - "8080:8080"
+    environment:
+    - TZ=Asia/Shanghai
+    volumes:
+    - /work/jenkins_master:/var/jenkins_home
+    extra_hosts:
+    - "gitlab.bmkp.cn:10.186.6.170"
+  jenkins-slave-jmeter1:
+    image: yuhongchun/jenkins-slave-docker-jmeter:v1.0
+    container_name: jenkins-slave-jmeter1
+    ports:
+    - "2226:22"
+    environment:
+    - TZ=Asia/Shanghai
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    extra_hosts:
+    - "gitlab.bmkp.cn:10.186.6.170"
+    command:
+    - "ssh-rsa B3NzaC1yc2EAAAADAQABAAABAQDQZb1vjKLkWAUOJaua/8CSFSID6L+8MbgutffdBqIeyoUvLUPpH2NkFAxKf8hW3Dj0lGkQ36hutsM23Jcs8b7rjhScmx2obyp7J1s7wic1GE3xaQY1Y0qwaxL3LIkmkrqkTdYyiVnD0Qv4PCx5GBTLQT2Xhf7wjE6oQcTOaIVu/RkooBv7sfEbcGMLwZmzFqqGtY0zEv/tbsvusVg7GPMFTvMw1r9l1C1G5Rxgcz76Vy+4MNskxdBsOZDWoX4gGulkbCBNP5Hf4WsvfH1HzPaoc3PTPUwht7/U2OtLNzO2C1rphRA6A4Eksyc3KI8OCSbku0KnGyM836QKtOv6UyR3 jenkins@1314520d"
+  jenkins-slave-mvn1:
+    image: yuhongchun/jenkins-slave-docker-maven:v1.0
+    container_name: jenkins-slave-mvn1
+    ports:
+    - "2222:22"
+    environment:
+    - TZ=Asia/Shanghai
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    extra_hosts:
+    - "gitlab.bmkp.cn:10.186.6.170"
+    command:
+    - "ssh-rsa B3NzaC1yc2EAAAADAQABAAABAQDQZb1vjKLkWAUOJaua/8CSFSID6L+8MbgutffdBqIeyoUvLUPpH2NkFAxKf8hW3Dj0lGkQ36hutsM23Jcs8b7rjhScmx2obyp7J1s7wic1GE3xaQY1Y0qwaxL3LIkmkrqkTdYyiVnD0Qv4PCx5GBTLQT2Xhf7wjE6oQcTOaIVu/RkooBv7sfEbcGMLwZmzFqqGtY0zEv/tbsvusVg7GPMFTvMw1r9l1C1G5Rxgcz76Vy+4MNskxdBsOZDWoX4gGulkbCBNP5Hf4WsvfH1HzPaoc3PTPUwht7/U2OtLNzO2C1rphRA6A4Eksyc3KI8OCSbku0KnGyM836QKtOv6UyR3 jenkins@1314520d"
+  jenkins-slave-sbt1:
+    image: yuhongchun/jenkins-slave-sbt:1.0
+    container_name: jenkins-slave-sbt1
+    ports:
+    - "2224:22"
+    environment:
+    - TZ=Asia/Shanghai
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    extra_hosts:
+    - "gitlab.bmkp.cn:10.186.6.170"
+    networks:
+    - default
+    command:
+    - "ssh-rsa B3NzaC1yc2EAAAADAQABAAABAQDQZb1vjKLkWAUOJaua/8CSFSID6L+8MbgutffdBqIeyoUvLUPpH2NkFAxKf8hW3Dj0lGkQ36hutsM23Jcs8b7rjhScmx2obyp7J1s7wic1GE3xaQY1Y0qwaxL3LIkmkrqkTdYyiVnD0Qv4PCx5GBTLQT2Xhf7wjE6oQcTOaIVu/RkooBv7sfEbcGMLwZmzFqqGtY0zEv/tbsvusVg7GPMFTvMw1r9l1C1G5Rxgcz76Vy+4MNskxdBsOZDWoX4gGulkbCBNP5Hf4WsvfH1HzPaoc3PTPUwht7/U2OtLNzO2C1rphRA6A4Eksyc3KI8OCSbku0KnGyM836QKtOv6UyR3 jenkins@1314520d"

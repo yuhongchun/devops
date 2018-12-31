@@ -1,0 +1,2 @@
+*/5 * * * * root /usr/bin/saltcheck.sh >>/var/log/salt.log
+#即每隔5分钟就执行/usr/bin/saltecheck.sh命令来检查下salt-minion服务
